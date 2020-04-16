@@ -21,7 +21,8 @@ mkdir -p /home/usuario/superset
 cd /home/usuario/superset
 git clone https://github.com/ernestosequeira/s2i-superset.git
 cd /home/usuario/superset/image-to-registry
-oc start-build superset --from-dir . --follow
+oc new-build --name superset --binary --strategy docker
+oc start-build superset --from-dir . --follow -n project-dev
 ```
 
 

@@ -1,1 +1,1 @@
-FROM esequeira/supernet:2
+FROM esequeira/supernet
