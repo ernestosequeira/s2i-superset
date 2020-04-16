@@ -110,7 +110,7 @@ objects:
             value: password
           - name: fab_username
             value: admin
-          image: 'irfius/s2i-superset:0.34.0'
+          image: 'esequeira/superset:2'
           name: superset
           ports:
           - containerPort: 8088
@@ -126,7 +126,7 @@ objects:
         - superset
         from:
           kind: ImageStreamTag
-          name: superset:0.34.0
+          name: esequeira:2
       type: ImageChange
   status: {}
 - apiVersion: v1
@@ -137,14 +137,14 @@ objects:
       io.kompose.service: superset
     name: superset
   spec: 
-    dockerImageRepository: docker.io/irfius/s2i-superset
+    dockerImageRepository: docker.io/esequeira/superset
     tags:
       -
         name: latest
         annotations: null
         from:
           kind: DockerImage
-          name: 'docker.io/irfius/s2i-superset:0.34.0'
+          name: 'docker.io/esequeira/superset:2'
         generation: 2
         importPolicy: {  }
   status:
@@ -169,7 +169,7 @@ objects:
       type: Recreate
     template:
       metadata:
-        creationTimestamp: null
+              creationTimestamp: null
         labels:
           io.kompose.service: superset-postgres
       spec:
@@ -326,4 +326,4 @@ objects:
   status: {}
 kind: Template
 metadata:
-  name: apache-superset-0.34.0
+  name: apache-superset-2
