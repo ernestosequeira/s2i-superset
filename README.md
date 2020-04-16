@@ -2,10 +2,10 @@
 Apache Superset on openshift 3.11
 
 
-# Deployment the applicacion in Openshift
+# 1. Deployment the applicacion in Openshift
 
 
-### 1) Prepare the enviroment for Openshift
+### Prepare the enviroment for Openshift
 
 ```sh
 $ oc login https://openshift.example.com:443 --token={xxxxxxxxxx}
@@ -14,7 +14,7 @@ $ oc status
 
 ```
 
-### 2) Add image to openshift registry
+### Add image to openshift registry
 
 ```sh
 $ mkdir -p /home/usuario/superset
@@ -25,7 +25,7 @@ $ oc start-build superset --from-dir . --follow
 ```
 
 
-# 3) Deployment the application 
+# 2. Deployment the application 
 
 
 ### Run command
@@ -35,7 +35,7 @@ $ oc create -f template.yaml
 ```
 
 
-# To build Build
+# 3. To build Build
 
 
 ### To build this image locally with s2i:
