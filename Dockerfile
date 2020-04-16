@@ -1,10 +1,10 @@
 FROM centos:7.6.1810
 
 LABEL io.k8s.description="Apache Superset" \
-      io.k8s.display-name="Apache Superset 0.34.0" \
+      io.k8s.display-name="Apache Superset" \
       io.openshift.expose-services="8088:http,8081:http" \
       io.openshift.tags="superset,python,apache" \
-      maintainer="Irfius <irfius@tuta.io>" \
+      maintainer="Ernesto Sequeira <erdaseq@gmail.com>" \
       io.openshift.s2i.scripts-url="image:///usr/libexec/s2i"
 
 ENV APACHE_SUPERSET_VERSION=0.34.0 \
