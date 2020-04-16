@@ -16,12 +16,12 @@ $ oc status
 
 ### Add image to openshift registry
 
-```sh
-$ mkdir -p /home/usuario/superset
-$ cd /home/usuario/superset
-$ git clone https://github.com/ernestosequeira/s2i-superset.git
-$ cd /home/usuario/superset/image-to-registry
-$ oc start-build superset --from-dir . --follow
+```
+mkdir -p /home/usuario/superset
+cd /home/usuario/superset
+git clone https://github.com/ernestosequeira/s2i-superset.git
+cd /home/usuario/superset/image-to-registry
+oc start-build superset --from-dir . --follow
 ```
 
 
