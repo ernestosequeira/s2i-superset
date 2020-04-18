@@ -235,7 +235,7 @@ objects:
     - ReadWriteOnce
     resources:
       requests:
-        storage: 100Mi
+        storage: 20Gi
     storageClassName: glusterfs-storage
   status: {}
 ################################## Deployment Redis ############################################    
