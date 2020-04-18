@@ -176,7 +176,7 @@ objects:
             value: superset_password
           - name: POSTGRESQL_USER
             value: superset_user
-          image: docker-registry.default.svc:5000/openshift/postgresql
+            image: docker-registry.default.svc:5000/openshift/postgresql:10
           name: superset-postgres
           ports:
           - containerPort: 5432
@@ -210,14 +210,14 @@ objects:
       io.kompose.service: superset-postgres
     name: superset-postgres
   spec: 
-    dockerImageRepository: docker-registry.default.svc:5000/openshift/postgresql
+    dockerImageRepository: docker-registry.default.svc:5000/openshift/postgresql:10
     tags:
       -
         name: latest
         annotations: null
         from:
           kind: DockerImage
-          name: 'docker-registry.default.svc:5000/openshift/postgresql'
+          name: 'docker-registry.default.svc:5000/openshift/postgresql:10'
         generation: 2
         importPolicy: {  }
   status:
@@ -235,7 +235,7 @@ objects:
     - ReadWriteOnce
     resources:
       requests:
-        storage: 20Gi
+        storage: 50Gi
     storageClassName: glusterfs-storage
   status: {}
 ################################## Deployment Redis ############################################    
@@ -323,7 +323,7 @@ objects:
     - ReadWriteOnce
     resources:
       requests:
-        storage: 20Gi
+        storage: 50Gi
     storageClassName: glusterfs-storage
   status: {}
 kind: Template
