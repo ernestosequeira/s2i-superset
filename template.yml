@@ -217,7 +217,7 @@ objects:
         annotations: null
         from:
           kind: DockerImage
-          name: 'docker-registry.default.svc:5000/openshift/postgresql:10'
+          name: docker-registry.default.svc:5000/openshift/postgresql:10
         generation: 2
         importPolicy: {  }
   status:
@@ -264,7 +264,7 @@ objects:
           io.kompose.service: superset-redis
       spec:
         containers:
-        - image: docker-registry.default.svc:5000/openshift/redis
+          image: docker-registry.default.svc:5000/openshift/redis:3.2
           name: superset-redis
           ports:
           - containerPort: 6379
@@ -298,14 +298,13 @@ objects:
       io.kompose.service: superset-redis
     name: superset-redis
   spec: 
-    dockerImageRepository: docker-registry.default.svc:5000/openshift/redis
+    dockerImageRepository: docker-registry.default.svc:5000/openshift/redis:3.2
     tags:
-      - 
-        name: latest
+      - name: latest
         annotations: null
         from:
           kind: DockerImage
-          name: 'docker-registry.default.svc:5000/openshift/redis'
+          name: docker-registry.default.svc:5000/openshift/redis:3.2
         generation: 2
         importPolicy: {  }
   status:
