@@ -198,7 +198,7 @@ objects:
         - superset-postgres
         from:
           kind: ImageStreamTag
-          name: superset-postgres:1
+          name: superset-postgres:10
       type: ImageChange
   status: {}
 ################################## ImagenStream PostgreSQL ############################################    
