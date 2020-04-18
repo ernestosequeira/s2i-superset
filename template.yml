@@ -110,7 +110,7 @@ objects:
             value: password
           - name: fab_username
             value: admin
-          image: 'esequeira/superset:2'
+          image: 'superset:latest'
           name: superset
           ports:
           - containerPort: 8088
@@ -126,7 +126,7 @@ objects:
         - superset
         from:
           kind: ImageStreamTag
-          name: esequeira:2
+          name: superset:latest
       type: ImageChange
   status: {}
 - apiVersion: v1
@@ -144,7 +144,7 @@ objects:
         annotations: null
         from:
           kind: DockerImage
-          name: 'docker.io/esequeira/superset:2'
+          name: 'superset:latest'
         generation: 2
         importPolicy: {  }
   status:

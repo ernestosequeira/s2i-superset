@@ -22,7 +22,7 @@ cd /home/usuario/superset
 git clone https://github.com/ernestosequeira/s2i-superset.git
 cd /home/usuario/superset/image-to-registry
 oc new-build --name superset --binary --strategy docker
-oc start-build superset --from-dir . --follow -n project-dev
+oc start-build superset --from-dir . --follow
 ```
 
 
@@ -32,7 +32,8 @@ oc start-build superset --from-dir . --follow -n project-dev
 ### Run command
 
 ```sh
-$ oc create -f template.yaml
+cd /home/usuario/superset/
+$ oc new-app -f template.yaml
 ```
 
 
