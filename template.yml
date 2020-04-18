@@ -176,7 +176,7 @@ objects:
             value: superset_password
           - name: POSTGRESQL_USER
             value: superset_user
-            image: docker-registry.default.svc:5000/openshift/postgresql:10
+          image: 'docker-registry.default.svc:5000/openshift/postgresql:10'
           name: superset-postgres
           ports:
           - containerPort: 5432
@@ -264,7 +264,7 @@ objects:
           io.kompose.service: superset-redis
       spec:
         containers:
-          image: docker-registry.default.svc:5000/openshift/redis:3.2
+        - image: docker-registry.default.svc:5000/openshift/redis
           name: superset-redis
           ports:
           - containerPort: 6379
@@ -298,13 +298,14 @@ objects:
       io.kompose.service: superset-redis
     name: superset-redis
   spec: 
-    dockerImageRepository: docker-registry.default.svc:5000/openshift/redis:3.2
+    dockerImageRepository: docker-registry.default.svc:5000/openshift/redis
     tags:
-      - name: latest
+      - 
+        name: latest
         annotations: null
         from:
           kind: DockerImage
-          name: docker-registry.default.svc:5000/openshift/redis:3.2
+          name: docker-registry.default.svc:5000/openshift/redis
         generation: 2
         importPolicy: {  }
   status:
