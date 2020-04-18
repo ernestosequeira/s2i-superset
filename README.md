@@ -33,7 +33,7 @@ oc start-build superset --from-dir . --follow
 
 ```sh
 cd /home/usuario/superset/
-$ oc new-app -f template.yaml
+$ oc new-app -f template.yml
 ```
 
 
