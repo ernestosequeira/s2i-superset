@@ -45,6 +45,8 @@ $ oc new-app -f template.yml
 ```sh
 $ git clone https://github.com/ernestosequeira/s2i-superset.git
 $ docker build -t esequeira/openshift-superset:2 .
-$ s2i build superset/ esequeira/openshift-superset:2 esequeira/s2i-superset:2
+$ s2i build superset/ esequeira/superset:3 esequeira/s2i-superset:3
+$ docker login
+$ docker build -t esequeira/superset:3 .
 ```
 
