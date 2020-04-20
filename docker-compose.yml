@@ -32,9 +32,9 @@ services:
       - REDIS_HOST=superset-redis
       - fab_username=admin
       - fab_firstname=admin
-      - fab_lastname=minda
+      - fab_lastname=admin
       - fab_email=admin@example.com
-      - fab_password=password
+      - fab_password=$_noPassDb$1PfzZÑ45
     ports: 
       - "8088:8088"
       - "8081:8081"
