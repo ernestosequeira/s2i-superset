@@ -1,1 +1,1 @@
-FROM esequeira/superset:3
+FROM esequeira/superset:5
