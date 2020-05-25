@@ -22,7 +22,7 @@ COPY .s2i/bin/ /usr/libexec/s2i
 
 RUN rpm --import /etc/pki/rpm-gpg/* && \
     yum -y update && \
-    yum -y install https://centos7.iuscommunity.org/ius-release.rpm && \
+    yum -y install https://repo.ius.io/ius-release-el7.rpm && \
     yum install -y --setopt=tsflags=nodocs $PY_DEPS && \
     yum install -y --setopt=tsflags=nodocs $PY368 && \
     pip3.6 install pipenv && \
